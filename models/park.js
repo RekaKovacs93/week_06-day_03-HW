@@ -42,4 +42,17 @@ Park.prototype.allVisitors = function (){
     return visitors
 }
 
+Park.prototype.dinoDiets = function(){
+    let diets = {}
+    for (const dino of this.dinos){
+        if (diets[dino.diet]){
+            diets[dino.diet] += 1
+        }
+        else {
+            diets[dino.diet] = 1
+        }
+    }
+    return diets
+}
+
 module.exports = Park;

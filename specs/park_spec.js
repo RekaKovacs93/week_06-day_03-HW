@@ -71,4 +71,10 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, 3433190000)
   });
 
+  it('should be able to calculate all diets', function(){
+    park.dinos = [steg, trex, raps]
+    const actual = park.dinoDiets()
+    assert.deepStrictEqual(actual, {carnivore: 2, herbivore: 1})
+  });
+
 });
